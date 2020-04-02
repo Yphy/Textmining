@@ -22,6 +22,7 @@ NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하�
 - Neural Machine Translation by Jointly Learning to Align and Translate
 
 
+
 ## MD&A analysis
 
 전자공시 시스템 Dart 에서 한국 코스피 시장에 상장되어있는 기업들의 사업보고서 중 **'이사의 경영진단 및 분석'** 파트에 해당하는 md&a section의 텍스트의 변화를 분석하는 프로젝트 및 논문작성을 진행중입니다.
@@ -29,6 +30,8 @@ NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하�
 해당 프로젝트에 대한 미국의 유사연구는 다음과 같습니다.
 >_'Similarity_BROWN_TUCKER(2011 JAR)Large-Sample Evidence on Firms Year-over-Year MD_A Modifications'_ 
 >_'Similarity_Cohen_Malloy_Nguyen(2019)LAZY PRICES'_   
+
+
 
 ### Data
 다트 사이트에서 제공하는 api를 이용하여 2010~2019년 10년 동안 연속적으로 kospi200에 편입되어있던 기업들의 사업보고서만을 대상으로 하였습니다. 편입퇴출 효과를 제거하기 위해 한번이라도 kospi200에서 제외되거나 사업보고서가 공시되지 않은 기업은 제외하였고 정정보고서나 추가보고서가 같은 해 중복 될 경우 첫 번째 공시날짜를 기준으로 하였습니다. 참고로 크롤링시 다트에서는 1분에 100번 이상의 request가 있을 시 사용자의 네트워크를 24시간 동안 차단합니다.
@@ -39,6 +42,8 @@ NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하�
 
 		pip install -U finance-datareader
  - [kospi200 data](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/1.kospi200%20data.ipynb)
+ 
+ 
 
 ### Preprocessing
 
@@ -49,17 +54,19 @@ NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하�
 ![mecab pos tags](https://user-images.githubusercontent.com/47969237/78253547-86944c80-752f-11ea-9276-34582748e48c.PNG)
 
  - [tokenization](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/3.Tokenization.ipynb)
+ 
+ 
 
 ### Measuring modification score
 
 사업보고서의 변화율 척도를 확인하는 방법으로 이전 보고서와 다음 해의 보고서의 text similarity를 계산합니다. 그 방법으로 **자카드 유사도**와 **코사인 유사도** 를 사용합니다. 사업보고서의 filing date인 rcp_dt 를 인덱스 , 기업명을 컬럼으로 하여 데이터프레임형태로 유사도를 저장하였습니다. 추후 다른 측정기법들을 추가하겠습니다.
 
-1.  sim_Jaccard = $$|{D_1}^{TF}∩{D_2}^{TF}| \over  |{D_1}^{TF}∪{D_2}^{TF}| $$
+1. sim_Jaccard = $$|{D_1}^{TF}∩{D_2}^{TF}| \over  |{D_1}^{TF}∪{D_2}^{TF}|$$
 
 
-3. sim_cosine = 
 
-$${D_1}^{TF}\cdot {D_2}^{TF} \over  ||{D_1}^{TF}|∪|{D_2}^{TF}|| $$
+2. sim_cosine = $${D_1}^{TF}\cdot {D_2}^{TF} \over  ||{D_1}^{TF}|∪|{D_2}^{TF}||$$
+
 
 
 
