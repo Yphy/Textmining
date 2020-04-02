@@ -43,6 +43,28 @@ NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하�
 ### Preprocessing
 
 한글은 영어와 달리 교착어이기때문에 단순 띄어쓰기만으로 의미가 구분되지 않습니다. 논문에서는 토큰화에 대한 정확한 설명이 없었기 때문에 형태소분석 후 모든 형태소를 사용하는 방법과 조사나 어미를 제외하는 등의 경우를 고려하고자 합니다.
-형태소 분석기는 **konlpy** 와 **mecab**을 사용하였습니다. Mecab에서 제공하는 pos tags를 선택하여 tokenization을 할 수 있습니다.
+형태소 분석기는 **konlpy** 와 **Mecab-ko**를 사용하였습니다. 
+아래 표의 pos tags를 선택하여 lemmatization을 합니다.
 
 ![mecab pos tags](https://user-images.githubusercontent.com/47969237/78253547-86944c80-752f-11ea-9276-34582748e48c.PNG)
+
+ - [tokenization](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/3.Tokenization.ipynb)
+
+### Measuring modification score
+
+사업보고서의 변화율 척도를 확인하는 방법으로 이전 보고서와 다음 해의 보고서의 text similarity를 계산합니다. 그 방법으로 **자카드 유사도**와 **코사인 유사도** 를 사용합니다. 사업보고서의 filing date인 rcp_dt 를 인덱스 , 기업명을 컬럼으로 하여 데이터프레임형태로 유사도를 저장하였습니다. 추후 다른 측정기법들을 추가하겠습니다.
+
+1.  sim_Jaccard = $$|{D_1}^{TF}∩{D_2}^{TF}| \over  |{D_1}^{TF}∪{D_2}^{TF}| $$
+
+
+3. sim_cosine = 
+
+$${D_1}^{TF}\cdot {D_2}^{TF} \over  ||{D_1}^{TF}|∪|{D_2}^{TF}|| $$
+
+
+
+### Create main table
+
+ - [ Similarity_Cohen_Malloy_Nguyen(2019)LAZY PRICES](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb))
+
+- [Similarity_BROWN_TUCKER(2011 JAR)Large-Sample Evidence on Firms Year-over-Year MD_A Modifications](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/2.Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/2.Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb))
