@@ -61,11 +61,12 @@ NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하�
 
 사업보고서의 변화율 척도를 확인하는 방법으로 이전 보고서와 다음 해의 보고서의 text similarity를 계산합니다. 그 방법으로 **자카드 유사도**와 **코사인 유사도** 를 사용합니다. 사업보고서의 filing date인 rcp_dt 를 인덱스 , 기업명을 컬럼으로 하여 데이터프레임형태로 유사도를 저장하였습니다. 추후 다른 측정기법들을 추가하겠습니다.
 
-1. sim_Jaccard = $$|{D_1}^{TF}∩{D_2}^{TF}| \over  |{D_1}^{TF}∪{D_2}^{TF}|$$
+
+1. sim_Jaccard = $$|{D_1}^{TF}∩{D_2}^{TF}|\over|{D_1}^{TF}∪{D_2}^{TF}|$$
 
 
 
-2. sim_cosine = $${D_1}^{TF}\cdot {D_2}^{TF} \over  ||{D_1}^{TF}|∪|{D_2}^{TF}||$$
+2. sim_cosine = $${D_1}^{TF}\cdot {D_2}^{TF}\over||{D_1}^{TF}|∪|{D_2}^{TF}||$$
 
 
 
