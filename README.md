@@ -49,7 +49,6 @@ bentrevett님의 pytorch 코드에서 많은 도움을 얻었습니다.
 형태소 분석기는 **konlpy** 와 **Mecab-ko**를 사용하였습니다. 
 아래 표의 pos tags를 선택하여 lemmatization을 합니다.
 
-![mecab pos tags](https://user-images.githubusercontent.com/47969237/78253547-86944c80-752f-11ea-9276-34582748e48c.PNG)
 
  - [tokenization](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/3.Tokenization.ipynb)
  
