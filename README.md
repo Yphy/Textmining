@@ -1,9 +1,5 @@
-# NLP
 
-NLP(natural language processing) 을 빙자한 텍스트 마이닝을 공부하고 있습니다.
-
-
-## ml_analysis
+# Ml_analysis
 
 자연어처리를 공부하면서 필요하다고 생각되는 딥러닝 네트워크들을 공부하여 정리를 하고 있습니다. 
 bentrevett님의 pytorch 코드에서 많은 도움을 얻었습니다.   
@@ -23,9 +19,11 @@ bentrevett님의 pytorch 코드에서 많은 도움을 얻었습니다.
 
 
 
-## MD&A analysis
+
+# MD&A analysis
 
 전자공시 시스템 Dart 에서 한국 코스피 시장에 상장되어있는 기업들의 사업보고서 중 **'이사의 경영진단 및 분석'** 파트에 해당하는 md&a section의 텍스트의 변화를 분석하는 프로젝트 및 논문작성을 진행중입니다.
+해당 프로젝트에 대한 자세한 포스트는 [Notion page](https://www.notion.so/MD-A-7f440a8328df4a1a9e7b502d605b524c) 에서 확인할 수 있습니다.
 
 해당 프로젝트에 대한 미국의 유사연구는 다음과 같습니다.
 >_'Similarity_BROWN_TUCKER(2011 JAR)Large-Sample Evidence on Firms Year-over-Year MD_A Modifications'_ 
@@ -73,6 +71,6 @@ bentrevett님의 pytorch 코드에서 많은 도움을 얻었습니다.
 
 ### Create main table
 
- - [ Similarity_Cohen_Malloy_Nguyen(2019)LAZY PRICES](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb))
+ - [ Similarity_Cohen_Malloy_Nguyen(2019)LAZY PRICES](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb)
 
-- [Similarity_BROWN_TUCKER(2011 JAR)Large-Sample Evidence on Firms Year-over-Year MD_A Modifications](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/2.Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/2.Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb))
+- [Similarity_BROWN_TUCKER(2011 JAR)Large-Sample Evidence on Firms Year-over-Year MD_A Modifications](https://github.com/Yphy/NLP/blob/master/md%26a_analysis/2.Similarity_Cohen_Malloy_Nguyen(2019)LAZY%20PRICES.ipynb)
